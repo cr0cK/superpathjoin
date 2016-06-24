@@ -24,5 +24,6 @@ superpathjoin
   ✓ should filter empty values
   ✓ should trim args
   ✓ should handle "../" relative parts
+  ✓ should not replace "://"
 ```
 

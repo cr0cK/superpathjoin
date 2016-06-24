@@ -17,7 +17,7 @@ function superpathjoin(...args) {
     args.pop();
   }
 
-  const filteredArgs = args
+  let filteredArgs = args
     .filter(arg => _.isString(arg) || _.isInteger(arg))
     .map(arg => String(arg).trim());
 
@@ -25,11 +25,17 @@ function superpathjoin(...args) {
     filteredArgs.unshift('/');
   }
 
+  // protect
+  filteredArgs = filteredArgs.map(arg => arg.replace('://', ':||'));
+
   let joinedPath = path.join(...filteredArgs);
 
   if (hasAbsoluteArg && !lastArgs) {
     joinedPath = joinedPath.replace(/^\/+/, '');
   }
+
+  // replace protected strings
+  joinedPath = joinedPath.replace(':||', '://');
 
   return joinedPath;
 }

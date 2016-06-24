@@ -48,4 +48,9 @@ describe('superpathjoin', () => {
     const ret = superpathjoin('path', 'to', '..', 'assets');
     expect(ret).equal('path/assets');
   });
+
+  it('should not replace "://"', () => {
+    const ret = superpathjoin('https://hostname/', '/path/', 'to', 'assets');
+    expect(ret).equal('https://hostname/path/to/assets');
+  });
 });
