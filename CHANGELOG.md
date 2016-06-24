@@ -5,8 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2016-06-24
+  - Fix main script export.
+
 ## 1.0.0 - 2016-06-24
   - Initial release.
 
 
-[Unreleased]: https://github.com/cr0cK/superpathjoin/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/cr0cK/superpathjoin/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/cr0cK/superpathjoin/compare/1.0.0...1.0.1

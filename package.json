@@ -1,8 +1,8 @@
 {
   "name": "superpathjoin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "path.join on steroïds.",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register $(find src -name '*.spec.js')",
     "clean": "rm -rf dist",
