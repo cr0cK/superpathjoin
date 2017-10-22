@@ -1,5 +1,9 @@
 import path from 'path';
-import _ from 'lodash';
+import last from 'lodash/last';
+import isBoolean from 'lodash/isBoolean';
+import isString from 'lodash/isString';
+import isInteger from 'lodash/isInteger';
+
 
 /**
  * Return a path joined by slashed.
@@ -10,15 +14,15 @@ import _ from 'lodash';
  *   remove the first slash(es)
  */
 function superpathjoin(...args) {
-  const lastArgs = _.last(args);
-  const hasAbsoluteArg = _.isBoolean(lastArgs);
+  const lastArgs = last(args);
+  const hasAbsoluteArg = isBoolean(lastArgs);
 
   if (hasAbsoluteArg) {
     args.pop();
   }
 
   let filteredArgs = args
-    .filter(arg => _.isString(arg) || _.isInteger(arg))
+    .filter(arg => isString(arg) || isInteger(arg))
     .map(arg => String(arg).trim());
 
   if (hasAbsoluteArg && lastArgs) {
