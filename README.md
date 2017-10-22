@@ -2,7 +2,7 @@
 
 path.join on steroïds.
 
-## Usage
+## Usage
 
 ```
 import { superpathjoin } from 'superpathjoin';
