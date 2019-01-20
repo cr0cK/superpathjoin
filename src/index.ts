@@ -1,5 +1,8 @@
 import * as path from 'path'
-import { last, isInteger, isBoolean, isString } from 'lodash'
+import last = require('lodash/last')
+import isBoolean = require('lodash/isBoolean')
+import isString = require('lodash/isString')
+import isInteger = require('lodash/isInteger')
 
 type Args = string | number | boolean | null | void
 
