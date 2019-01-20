@@ -2,7 +2,7 @@
   "compilerOptions": {
     "sourceMap": false,
     "target": "es5",
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -19,8 +19,6 @@
     "outDir": "dist",
     "lib": ["esnext"]
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   "exclude": ["**/__tests__/**", "node_modules"]
 }
