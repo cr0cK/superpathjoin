@@ -1,5 +1,4 @@
 import * as path from 'path'
-import { last, isInteger, isBoolean, isString } from 'lodash'
 
 type Args = string | number | boolean | null | void
 
@@ -12,15 +11,15 @@ type Args = string | number | boolean | null | void
  *   remove the first slash(es)
  */
 function superpathjoin(...args: Args[]): string {
-  const lastArgs = last(args)
-  const hasAbsoluteArg = isBoolean(lastArgs)
+  const lastArgs = args[args.length - 1]
+  const hasAbsoluteArg = typeof lastArgs === 'boolean'
 
   if (hasAbsoluteArg) {
     args.pop()
   }
 
   let filteredArgs = args
-    .filter(arg => isString(arg) || isInteger(arg))
+    .filter(arg => typeof arg === 'string' || typeof arg === 'number')
     .map(arg => String(arg).trim())
 
   if (hasAbsoluteArg && lastArgs) {
