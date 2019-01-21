@@ -3,15 +3,15 @@
   "version": "1.2.1",
   "description": "path.join on steroïds.",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
   "typings": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && cp src/index.js.flow dist",
+    "prebuild": "rm -rf dist",
+    "build": "microbundle -f es,cjs",
+    "postbuild": "cp src/index.js.flow dist",
     "prepublish": "npm run build"
-  },
-  "bin": {
-    "superpathjoin": "dist/index.js"
   },
   "author": "Alexis Mineaud <alexis.mineaud@gmail.com>",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.18",
     "jest": "^23.6.0",
+    "microbundle": "^0.9.0",
     "prettier": "^1.16.0",
     "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
