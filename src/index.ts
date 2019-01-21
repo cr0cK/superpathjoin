@@ -18,6 +18,10 @@ function superpathjoin(...args: Args[]): string {
     args.pop()
   }
 
+  if (!args.length) {
+    return ''
+  }
+
   let filteredArgs = args
     .filter(arg => typeof arg === 'string' || typeof arg === 'number')
     .map(arg => String(arg).trim())

@@ -1,6 +1,11 @@
 import { superpathjoin } from '../.'
 
 describe('superpathjoin', () => {
+  it('should return an empty string if no args are passed', () => {
+    const ret = superpathjoin()
+    expect(ret).toBe('')
+  })
+
   it('should join parts', () => {
     const ret = superpathjoin('path', 'to', 'assets')
     expect(ret).toBe('path/to/assets')
