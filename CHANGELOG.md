@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.3.0] - 2019-01-21
+
+- Add cjsm and esm builds.
+
 ## [1.2.1] - 2019-01-21
 
 - Fix tree shaking issue by removing lodash dependency.
