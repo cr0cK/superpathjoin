@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+  * **BREAKING**
+    Removed named export that conflicts with default exports in builds.
+    See https://github.com/developit/microbundle/issues/306
 
 ## [1.3.0] - 2019-01-21
 

@@ -1,7 +1,5 @@
 // @flow
 
-declare type Path = string | number | boolean | null | void;
+declare type Path = string | number | boolean | null | void
 
-declare export function superpathjoin(...paths: Array<Path>): string;
-
-declare export default typeof superpathjoin;
+declare export default function superpathjoin(...paths: Array<Path>): string
