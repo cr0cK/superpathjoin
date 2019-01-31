@@ -45,5 +45,4 @@ function superpathjoin(...args: Args[]): string {
   return joinedPath
 }
 
-export { superpathjoin }
 export default superpathjoin
