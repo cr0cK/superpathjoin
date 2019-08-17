@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [2.0.0] - 2019-08-17
+
 ### Changed
   * **BREAKING**
-    Removed named export that conflicts with default exports in builds.
+    Removed default export that conflicts with named exports in builds.
     See https://github.com/developit/microbundle/issues/306
+  * Update dependances.
+  * Update the Flow declaration.
 
 ## [1.3.0] - 2019-01-21
 
