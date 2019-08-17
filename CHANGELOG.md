@@ -5,14 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.1] - 2019-08-17
+
+### Fixed
+
+- Fix Flow declaration.
+
 ## [2.0.0] - 2019-08-17
 
 ### Changed
-  * **BREAKING**
+
+- **BREAKING**
     Removed default export that conflicts with named exports in builds.
     See https://github.com/developit/microbundle/issues/306
-  * Update dependances.
-  * Update the Flow declaration.
+- Update dependances.
+- Update the Flow declaration.
 
 ## [1.3.0] - 2019-01-21
 
@@ -22,7 +29,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix tree shaking issue by removing lodash dependency.
   See [#5](https://github.com/cr0cK/superpathjoin/pull/5) for details.
-
 - Fix returned path when no args are passed.
 
 ## [1.2.0] - 2019-01-20
