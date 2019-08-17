@@ -1,4 +1,4 @@
-import superpathjoin from '../.'
+import { superpathjoin } from '../.'
 
 describe('superpathjoin', () => {
   it('should return an empty string if no args are passed', () => {

@@ -10,7 +10,7 @@ type Args = string | number | boolean | null | void
  * If the last args is a boolean equal to `false`,
  *   remove the first slash(es)
  */
-function superpathjoin(...args: Args[]): string {
+export function superpathjoin(...args: Args[]): string {
   const lastArgs = args[args.length - 1]
   const hasAbsoluteArg = typeof lastArgs === 'boolean'
 
@@ -44,5 +44,3 @@ function superpathjoin(...args: Args[]): string {
 
   return joinedPath
 }
-
-export default superpathjoin
