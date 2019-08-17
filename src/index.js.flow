@@ -2,6 +2,4 @@
 
 declare type Path = string | number | boolean | null | void
 
-declare module "superpathjoin" {
-  declare export function superpathjoin(...paths: Array<Path>): string;
-}
+declare export function superpathjoin(...paths: Array<Path>): string;
