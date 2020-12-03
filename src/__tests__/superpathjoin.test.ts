@@ -31,6 +31,11 @@ describe('superpathjoin', () => {
     expect(ret).toBe('/path/to/assets/')
   })
 
+  it('should join with deduplicate slashes for leading slash and last arg is true', () => {
+    const ret = superpathjoin('/path/', '/to', 'assets/', true)
+    expect(ret).toBe('/path/to/assets/')
+  })
+
   it('should remove the first slash if the last arg is false', () => {
     const ret = superpathjoin('/path/', '/to', 'assets/', false)
     expect(ret).toBe('path/to/assets/')
